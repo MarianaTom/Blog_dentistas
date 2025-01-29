@@ -8,44 +8,98 @@
     <meta name="author" content="Tu Nombre">
     <title>Blog Dentistas</title>
     <link rel="stylesheet" href="css/styles.css">
+   
+    <script>
+        function mostrarCategoria(categoria) {
+            // Mostrar u ocultar artículos según la categoría
+            let categorias = document.querySelectorAll('.category');
+            categorias.forEach(function(c) {
+                c.style.display = 'none';  // Ocultar todas las categorías
+            });
+
+            // Mostrar solo la categoría seleccionada
+            if (categoria === 'todas') {
+                categorias.forEach(function(c) {
+                    c.style.display = 'block';
+                });
+            } else {
+                let selectedCategory = document.querySelector(`#${categoria}`);
+                selectedCategory.style.display = 'block';
+            }
+
+            // Cambiar el tamaño de las imágenes
+            let allImages = document.querySelectorAll('.article-box img');
+            allImages.forEach(function(img) {
+                img.classList.remove('smaller');  // Eliminar la clase 'smaller' de todas las imágenes
+            });
+
+            if (categoria !== 'todas') {
+                let selectedImages = document.querySelectorAll(`#${categoria} .article-box img`);
+                selectedImages.forEach(function(img) {
+                    img.classList.add('smaller');  // Hacer las imágenes más pequeñas en la categoría seleccionada
+                });
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="mostrarCategoria('todas')">
     <!-- Menú de navegación -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-link">Inicio</a>
-            <a href="#">Categorías</a>
-            <a href="#formulario">Compartir un artículo</a> <!-- Cambié este enlace -->
+            <a href="index.html" class="nav-link" onclick="mostrarCategoria('todas')">Inicio</a>
+
+            <select onchange="mostrarCategoria(this.value)">
+                <option value="todas">CATEGORÍAS</option>
+                <option value="salud-bucal">Salud Bucal</option>
+                <option value="consejos-dentales">Consejos Dentales</option>
+            </select>
+            <a href="#formulario">Compartir un artículo</a>
         </div>
     </nav>
-
 
     <header class="header">
         <h1>La Mágia de Sonreír</h1>
     </header>
 
+    <!-- Sección de Artículos por Categoría -->
+    <div class="categories">
 
-    <div class="articles">
+        <!-- Categoría: Salud Bucal -->
+        <section class="category" id="salud-bucal">
+            <h2>Salud Bucal</h2>
+            <div class="articles">
+                <div class="article-box">
+                    <img src="img/prueba.png" alt="Articulo 1">
+                    <h2><a href="articulos/articulo1.html">Bruxismo: Identifica sus señales y evita el daño en tus dientes</a></h2>
+                    <p class="meta">Autor: Odont. Mireya Sayuri Tanaka Chávez | Fecha: 25 Enero 2025 | Categoría: Salud bucal</p>
+                    <p class="preview">El Bruxismo es una condición dental frecuente caracterizada por el rechinamiento o apretamiento excesivo de los dientes, que puede llevar a complicaciones significativas si no se detecta y trata a tiempo.</p>
+                </div>
+                <!-- Más artículos de Salud Bucal -->
+            </div>
+        </section>
 
-        <div class="article-box">
-            <img src="img/prueba.png" alt="Articulo 1">
-            <h2><a href="/articulos/articulo1.html">Bruxismo: Identifica sus señales y evita el daño en tus dientes</a></h2>
-            <p class="meta">Autor: Odont. Mireya Sayuri Tanaka Chávez | Fecha: 25 Enero 2025 | Categoría: Consejos Dentales</p>
-            <p class="preview">El Bruxismo es una condición dental frecuente caracterizada por el rechinamiento o apretamiento excesivo de los dientes, que puede llevar a complicaciones significativas si no se detecta y trata a tiempo.</p>
-        </div>
+        <!-- Categoría: Consejos Dentales -->
+        <section class="category" id="consejos-dentales">
+            <h2>Consejos Dentales</h2>
+            <div class="articles">
+                <div class="article-box">
+                    <img src="img/prueba.png" alt="Articulo 2">
+                    <h2><a href="articulos/articulo2.html">El Boom de las Sonrisas Perfectas: Tecnología, Arte y Estética en Odontologías</a></h2>
+                    <p class="meta">Autor: Odont. Lizbeth Infante Castañeda | Fecha: 23 Enero 2025 | Categoría: Consejos dentales</p>
+                    <p class="preview">La búsqueda de la perfección en la sonrisa no es un fenómeno moderno. Los egipcios fueron pioneros al crear pastas dentales con piedra pómez y vinagre para eliminar manchas dentales.</p>
+                </div>
 
-
-        <div class="article-box">
-            <img src="img/prueba.png" alt="Articulo 2">
-            <h2><a href="/articulos/articulo2.html">El Boom de las Sonrisas Perfectas: Tecnología, Arte y Estética en Odontologías</a></h2>
-            <p class="meta">Autor: Odont. Lizbeth Infante Castañeda | Fecha: 23 Enero 2025 | Categoría: Salud Bucal</p>
-            <p class="preview">La búsqueda de la perfección en la sonrisa no es un fenómeno moderno. Los egipcios fueron pioneros al crear pastas dentales con piedra pómez y vinagre para eliminar manchas dentales.</p>
-        </div>
-
-       <!--AQUI AGREGARE MAS ARTICULOS-->
+                <div class="article-box">
+                    <img src="img/prueba.png" alt="Articulo 3">
+                    <h2><a href="articulos/articulo3.html">Implantes Dentales</a></h2>
+                    <p class="meta">Autor: Dr. Javier Arroyo Sebastián | Fecha: 25 Enero 2025 | Categoría: Consejos dentales</p>
+                    <p class="preview">La búsqueda de la perfección en la sonrisa no es un fenómeno moderno. Los egipcios fueron pioneros al crear pastas dentales con piedra pómez y vinagre para eliminar manchas dentales.</p>
+                </div>
+                <!-- Más artículos de Consejos Dentales -->
+            </div>
+        </section>
 
     </div>
-
 
     <footer id="formulario">
         <h3>¿Quieres compartir un artículo?</h3>
