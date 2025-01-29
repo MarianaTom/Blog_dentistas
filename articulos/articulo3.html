@@ -10,7 +10,6 @@
     <nav>
         <div class="nav-container">
             <a href="../index.html" class="nav-link">Inicio</a>
-            <a href="#">Categorías</a>
             <a href="#disqus_thread">Comentarios</a>
         </div>
     </nav>
@@ -86,25 +85,19 @@
     </div>
 
     <footer>
-        <footer>
-            <p>¿Tienes comentarios sobre este artículo? ¡Deja tus pensamientos abajo!</p>
+        <p></p>
+        <div id="disqus_thread"></div>
+<script>
 
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_config = function () {
-                    this.page.url = window.location.href;  // URL de la página del artículo
-                    this.page.identifier = "articulo1";    // Identificador único para este artículo
-                };
-    
-                (function() {  // Carga el script de Disqus
-                    var s = document.createElement('script'); s.async = true;
-                    s.type = 'text/javascript';
-                    s.src = 'https://TUSITIO.disqus.com/embed.js'; // Reemplaza 'TUSITIO' con tu shortname de Disqus
-                    (document.head || document.body).appendChild(s);
-                })();
-            </script>
-        </footer>
-    
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blog-dental-coments.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//blog-dental-coments.disqus.com/count.js" async></script>
     </footer>
 </body>
 </html>

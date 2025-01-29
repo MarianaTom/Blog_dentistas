@@ -1,58 +1,55 @@
-/* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
     background-color: #e4eaf9;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease; /* Transición suave en el fondo */
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo para la sección de autor */
 .author-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    transition: margin-bottom 0.3s ease; /* Transición en el margen */
+    transition: margin-bottom 0.3s ease;
 }
 
 .author-photo {
-    width: 80px;  /* Ajusta el tamaño de la foto */
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-right: 15px;
-    transition: transform 0.3s ease; /* Transición en la transformación */
+    transition: transform 0.3s ease;
 }
 
 .author-photo:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.1);
 }
 
 .author-details {
     font-size: 14px;
-    transition: font-size 0.3s ease; /* Transición en el tamaño de fuente */
+    transition: font-size 0.3s ease;
 }
 
 .author-name {
     font-weight: bold;
     font-size: 16px;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
 .author-name:hover {
-    color: #2980B9; /* Cambio de color al pasar el ratón */
+    color: #2980B9;
 }
 
 .author-meta {
     color: gray;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
-/* Estilos de navegación */
 nav {
     background-color: #91b5fa;
     padding: 15px;
     text-align: center;
-    transition: background-color 0.3s ease; /* Transición en el fondo */
+    transition: background-color 0.3s ease;
 }
 
 .nav-container a {
@@ -60,53 +57,50 @@ nav {
     text-decoration: none;
     padding: 10px;
     margin: 0 15px;
-    transition: padding 0.3s ease; /* Transición en el relleno */
+    transition: padding 0.3s ease;
 }
 
 .nav-container a:hover {
     background-color: #87b0d8;
-    padding: 15px; /* Aumenta el relleno al pasar el ratón */
+    padding: 15px;
 }
 
-/* Contenedor principal con dos columnas */
 .main-container {
     display: flex;
     justify-content: space-between;
     margin: 20px;
-    transition: margin 0.3s ease; /* Transición en el margen */
+    transition: margin 0.3s ease;
 }
 
-/* Artículo */
 .content-article {
     flex: 3;
     background-color: white;
     padding: 20px;
     margin-right: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease; /* Transición en la sombra */
+    transition: box-shadow 0.3s ease;
 }
 
 .content-article:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el ratón */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .article-header h1 {
     font-size: 2em;
     color: #333;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
 .article-header h1:hover {
-    color: #2980B9; /* Cambio de color al pasar el ratón */
+    color: #2980B9;
 }
 
 .article-body {
     font-size: 1.1em;
     line-height: 1.6;
-    transition: font-size 0.3s ease; /* Transición en el tamaño de la fuente */
+    transition: font-size 0.3s ease;
 }
 
-/* Artículos relacionados */
 .related-articles {
     flex: 1;
     background-color: white;
@@ -116,27 +110,27 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    transition: box-shadow 0.3s ease; /* Transición en la sombra */
+    transition: box-shadow 0.3s ease;
 }
 
 .related-articles:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el ratón */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .related-articles h3 {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 20px;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
 .related-articles h3:hover {
-    color: #2980B9; /* Cambio de color al pasar el ratón */
+    color: #2980B9;
 }
 
 .related-item {
     margin-bottom: 15px;
-    transition: margin-bottom 0.3s ease; /* Transición en el margen */
+    transition: margin-bottom 0.3s ease;
 }
 
 .related-image {
@@ -144,38 +138,37 @@ nav {
     height: auto;
     max-width: 100px;
     margin-bottom: 10px;
-    transition: transform 0.3s ease; /* Transición en la transformación */
+    transition: transform 0.3s ease;
 }
 
 .related-image:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.1);
 }
 
 .related-item a {
     text-decoration: none;
     color: #2C3E50;
     font-weight: bold;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
 .related-item a:hover {
     color: #2980B9;
 }
 
-/* Footer */
 footer {
     background-color: #80acff;
     padding: 20px;
     text-align: center;
     color: white;
-    transition: background-color 0.3s ease; /* Transición en el fondo */
+    transition: background-color 0.3s ease;
 }
 
 footer a {
     color: #ECF0F1;
-    transition: color 0.3s ease; /* Transición en el color */
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #2980B9; /* Cambio de color al pasar el ratón */
+    color: #2980B9;
 }

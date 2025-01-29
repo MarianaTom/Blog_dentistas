@@ -11,13 +11,11 @@
    
     <script>
         function mostrarCategoria(categoria) {
-            // Mostrar u ocultar artículos según la categoría
             let categorias = document.querySelectorAll('.category');
             categorias.forEach(function(c) {
-                c.style.display = 'none';  // Ocultar todas las categorías
+                c.style.display = 'none';
             });
 
-            // Mostrar solo la categoría seleccionada
             if (categoria === 'todas') {
                 categorias.forEach(function(c) {
                     c.style.display = 'block';
@@ -27,23 +25,21 @@
                 selectedCategory.style.display = 'block';
             }
 
-            // Cambiar el tamaño de las imágenes
             let allImages = document.querySelectorAll('.article-box img');
             allImages.forEach(function(img) {
-                img.classList.remove('smaller');  // Eliminar la clase 'smaller' de todas las imágenes
+                img.classList.remove('smaller');
             });
 
             if (categoria !== 'todas') {
                 let selectedImages = document.querySelectorAll(`#${categoria} .article-box img`);
                 selectedImages.forEach(function(img) {
-                    img.classList.add('smaller');  // Hacer las imágenes más pequeñas en la categoría seleccionada
+                    img.classList.add('smaller');
                 });
             }
         }
     </script>
 </head>
 <body onload="mostrarCategoria('todas')">
-    <!-- Menú de navegación -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-link" onclick="mostrarCategoria('todas')">Inicio</a>
@@ -58,13 +54,10 @@
     </nav>
 
     <header class="header">
-        <h1>La Mágia de Sonreír</h1>
+        <h1>La Magia de Sonreír</h1>
     </header>
 
-    <!-- Sección de Artículos por Categoría -->
     <div class="categories">
-
-        <!-- Categoría: Salud Bucal -->
         <section class="category" id="salud-bucal">
             <h2>Salud Bucal</h2>
             <div class="articles">
@@ -74,11 +67,9 @@
                     <p class="meta">Autor: Odont. Mireya Sayuri Tanaka Chávez | Fecha: 25 Enero 2025 | Categoría: Salud bucal</p>
                     <p class="preview">El Bruxismo es una condición dental frecuente caracterizada por el rechinamiento o apretamiento excesivo de los dientes, que puede llevar a complicaciones significativas si no se detecta y trata a tiempo.</p>
                 </div>
-                <!-- Más artículos de Salud Bucal -->
             </div>
         </section>
 
-        <!-- Categoría: Consejos Dentales -->
         <section class="category" id="consejos-dentales">
             <h2>Consejos Dentales</h2>
             <div class="articles">
@@ -95,10 +86,8 @@
                     <p class="meta">Autor: Dr. Javier Arroyo Sebastián | Fecha: 25 Enero 2025 | Categoría: Consejos dentales</p>
                     <p class="preview">La búsqueda de la perfección en la sonrisa no es un fenómeno moderno. Los egipcios fueron pioneros al crear pastas dentales con piedra pómez y vinagre para eliminar manchas dentales.</p>
                 </div>
-                <!-- Más artículos de Consejos Dentales -->
             </div>
         </section>
-
     </div>
 
     <footer id="formulario">

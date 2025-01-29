@@ -10,19 +10,14 @@
     <link rel="stylesheet" href="../css/articulos.css"> 
 </head>
 <body>
-
-  
     <nav>
         <div class="nav-container">
             <a href="../index.html" class="nav-link">Inicio</a>
-            <a href="#">Categorías</a>
             <a href="#disqus_thread">Comentarios</a>
         </div>
     </nav>
 
-
     <div class="main-container">
-        <!-- Artículo -->
         <article class="content-article">
             <header class="article-header">
                 <div class="author-info">
@@ -77,31 +72,27 @@
             
         </article>
 
-        <!-- Artículos relacionados -->
         <div class="related-articles">
             <h3>Artículos relacionados</h3>
             <div class="related-item">
                 <a href="articulo2.html">El Boom de las Sonrisas Perfectas: Tecnología, Arte y Estética en Odontología</a>
             </div>
-            
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p></p>
         <div id="disqus_thread"></div>
-<script>
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://blog-dental-coments.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<script id="dsq-count-scr" src="//blog-dental-coments.disqus.com/count.js" async></script>
+        <script>
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://blog-dental-coments.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <script id="dsq-count-scr" src="//blog-dental-coments.disqus.com/count.js" async></script>
     </footer>
 
 </body>

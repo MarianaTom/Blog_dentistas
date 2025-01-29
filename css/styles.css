@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -7,25 +6,24 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ebf1ff; /* Color suave de fondo */
+    background-color: #ebf1ff;
     line-height: 1.6;
-    color: #3666cc; /* Color de texto oscuro */
+    color: #3666cc;
     font-size: 16px;
 }
 
 a {
     text-decoration: none;
-    color: #6e9bef; /* Azul oscuro */
+    color: #6e9bef;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #82b4ed; /* Verde suave al pasar el mouse */
+    color: #82b4ed;
 }
 
-/* Estilos de navegación */
 nav {
-    background-color: #91b5fa; /* Verde confiable */
+    background-color: #91b5fa;
     color: white;
     padding: 20px;
     text-align: center;
@@ -42,10 +40,9 @@ nav {
 }
 
 .nav-container a:hover {
-    color: #2d5271; /* Azul muy claro para contraste */
+    color: #2d5271;
 }
 
-/* Menú desplegable para categorías */
 select {
     padding: 10px;
     font-size: 16px;
@@ -55,26 +52,25 @@ select {
     cursor: pointer;
     transition: border-color 0.3s ease, background-color 0.3s ease;
     margin-left: 20px;
-    color: #ffffff; /* Color de la letra dentro del select */
-    font-weight: bold; /* Hacer el texto en negritas */
-    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Cambiar el color de las opciones del menú desplegable */
 select option {
-    color: #3666cc; /* Color de la letra dentro de las opciones */
-    background-color: #ebf1ff; /* Color de fondo de las opciones */
-    font-weight: bold; /* Negritas para las opciones */
-    text-transform: uppercase; /* Mayúsculas para las opciones */
+    color: #3666cc;
+    background-color: #ebf1ff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
+
 select:hover {
     border-color: #91b5fa;
-    background-color: #91b5fa; /* Azul claro al pasar el mouse */
+    background-color: #91b5fa;
 }
 
-/* Estilos de la imagen del encabezado */
 .header {
-    background-image: url('../img/barner.jpg'); /* Asegúrate de que la imagen esté en el directorio correcto */
+    background-image: url('../img/barner.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -94,7 +90,6 @@ select:hover {
     text-shadow: 2px 2px 4px rgba(109, 207, 235, 0.5);
 }
 
-/* Artículos (disposición 2x2) */
 .articles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -118,7 +113,7 @@ select:hover {
 
 .article-box h2 {
     font-size: 24px;
-    color:  #4585fd; /* Azul confiable */
+    color:  #4585fd;
     margin: 15px 0;
 }
 
@@ -138,7 +133,6 @@ select:hover {
     transform: translateY(-10px);
 }
 
-/* Estilo del formulario de contacto */
 footer {
     background-color: #91b5fa;
     color: white;
